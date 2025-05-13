@@ -3,7 +3,7 @@ package entornos;
 public abstract class algoritmos {
 	public int fibonacci(int n) {
 		if(n<0) {
-			///throw
+			throw new IllegalArgumentException("numero menor a 0");
 		}
 		int f0 = 0;
 		int f1 = 1;
@@ -17,7 +17,7 @@ public abstract class algoritmos {
 	}
 	public int factorial(int n) {
 		if(n<0) {
-			///throw
+			throw new IllegalArgumentException("numero menor a 0");
 		}
 		int ans = 1;
 		for (int i = 1; i <= n; i++) {
@@ -27,6 +27,7 @@ public abstract class algoritmos {
 	}
 	public boolean primo(int n) {
 		if (n<2){
+			throw new IllegalArgumentException("numero menor a 2");
 			
 		}
 		for (int i = 2; i < n; i++) {
